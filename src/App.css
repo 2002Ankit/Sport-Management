@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+} 
+/* .background{
+  scroll-behavior: smooth;
+} */
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+  outline: none;
+ 
+ 
+} 
+
+/* html{
+  scroll-behavior: smooth;
+} */
+
+/* .background{
+  background-image: url("assets/boy.png");
+} */
+
+/* styling of register btn in card */
+
+.register-btn {
+  background-color: rgb(98, 110, 122);
+  color: white;
+  padding: 8px;
+  width: 170px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+
+  box-shadow: 2px 2px 4px 0px grey;
+  /* border: 2px solid pink; */
+  border-style: none;
+  position: relative;
+  z-index: 0;
+}
+
+.register-btn::before {
+  content: "";
+  background-color:rgb(8, 77, 37);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.8s;
+  z-index: -1;
+
+}
+
+.register-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.register-btn:hover {
+  cursor: pointer; 
+}
+
+.cards {
+  box-shadow: 2px 2px 4px 0px grey
+}
+
+/* register btn stylind end here. */
+
+
+
+/* .logo {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.bars {
+  width: 30px;
+} */
+
+.navbar {
+  width: 100vw;  
+  position: sticky;
+  top: 0;    
+  z-index: 999;
+
+}
+
+/* .main-container{
+ width: 100vw;
+ display: flex;
+
+ position: relative;
+ top: 0px;
+ left: 0;
+ right: 0;
+
+} */
+

@@ -1,0 +1,68 @@
+@media(max-width:880px){
+    .form-template{
+        width: 100vw;
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+       margin-left: auto;
+       margin-right: auto;
+       background:#010b13;
+        
+    }
+
+
+    .temp-image-responsive{
+        display: none;
+    }
+
+    .desc1-text{
+        color: antiquewhite;
+    }
+
+    .desc2-text{
+        color: green;
+    }
+
+    .signup-google-btn{
+        background-color: rgb(46, 78, 46);
+    }
+
+    .signup-google-btn:hover{
+        background-color: green;
+    }
+
+    .create-btn{
+        background-color: rgb(46, 78, 46);
+    }
+    .create-btn:hover{
+        background-color: green;
+    }
+}
+
+@media(max-width:1180px){
+    .frame-image{
+        position: absolute;
+        width: 19rem;
+        height: 350px;
+        right: 6rem;
+        top: -0.8125rem;
+    }
+    .temp-frame{
+        position: relative;
+        width:19rem ;
+        height:350px ;
+    }
+}
+
+@media(max-width:1080px){
+    .frame-image{
+        position: absolute;
+        width: 19rem;
+        height: 350px;
+    }
+    .temp-frame{
+        position: relative;
+        width:19rem ;
+        height:350px ;
+    }
+}

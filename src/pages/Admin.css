@@ -1,0 +1,13 @@
+.Admin-background{
+    width: 100vw;    
+    background-image: url("../assets/mountainImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    
+}
+
+.admin-form{
+    box-shadow: 1px 1px 10px 0px rgb(227, 226, 226);
+}

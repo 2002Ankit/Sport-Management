@@ -1,0 +1,25 @@
+.Profile-Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    
+   
+}
+.header-icon{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.user-sideMenu{
+    height: 100%;
+}
+
+.user-sideMenuVertical{
+    height: 100%;
+    vertical-align: baseline;
+}
+

@@ -1,0 +1,102 @@
+.about-background1{
+    background: url("../assets/aboutimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position:relative ;
+    
+    
+    
+}
+.about-background2{
+    background: url("../assets/aboutCricketImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position:relative ;
+    
+    
+}
+.about-background3{
+    background: url("../assets/aboutChessImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position:relative ;
+    
+    
+}
+.about-background4{
+    background: url("../assets/aboutStadImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position:relative ;
+    
+    
+    
+}
+.about-heading{
+position: relative;
+top: 6rem;
+left: 4rem;
+color: white;
+font-size: 55px;
+font-weight: 600;
+}
+
+.about-heading2{
+   position: relative;
+top: 6rem;
+left: 4rem;
+color: brown;
+font-size: 40px;
+font-weight: 500;
+}
+.about-pic{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 4rem;
+    /* height: 100vh; */
+}
+
+.about-text{
+    line-height: 2rem;
+    font-size:18px;
+   
+}
+
+.khelo-text{
+    font-weight: 600;
+    color: white;
+    font-size: 26px;
+}
+
+
+@media(max-width:880px){
+    .about-resp{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .story-resp{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .image-aboutUs{
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,35 @@
+@media(max-width:880px){
+    .signup-btn{
+        background-color: green;
+        border: none;
+    }
+
+    .signup-btn:hover{
+        background-color: rgb(21, 61, 21);
+        color: white;
+    }
+
+    .input-bg{
+        background-color: rgb(37, 113, 37);
+    }
+
+    .switch-btn{
+        background-color: rgb(3, 53, 3);
+    }
+    .user-btn{
+        background-color: rgb(42, 99, 42);
+    }
+    .user-btn2{
+        background-color: transparent;
+    }
+
+    .admin-btn{
+        background-color: rgb(42, 99, 42);
+    }
+    .admin-btn2{
+        background-color: transparent;
+    }
+
+
+
+}

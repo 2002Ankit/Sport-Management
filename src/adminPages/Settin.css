@@ -1,0 +1,118 @@
+
+
+.admin-setting {
+    height: 40px;
+    width: 100%;
+    position: relative;    
+
+}
+
+ .admin-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgb(192, 192, 192);
+    outline-style: none;
+    color: rgb(43, 42, 42);
+    background: none;
+   
+
+
+}
+
+
+
+ .admin-input:focus~label,
+ .admin-input:valid~label {
+    transform: translateY(-20px);
+    font-size: 17px;
+    color: rgb(225, 77, 77);
+    font-weight: 600;
+}
+.admin-input:focus~span,
+.admin-input:valid~span {
+   
+   font-size: 17px;
+   color: rgb(225, 77, 77);
+   font-weight: 600;
+}
+
+.admin-setting label {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: gray;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 14;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.Adminunderline-text{
+    position: absolute;
+    height: 2px;
+    
+    bottom: 0;
+}
+
+.Adminunderline-text::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgb(225, 77, 77);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.admin-input:focus~.Adminunderline-text::before,
+.admin-input:valid~.Adminunderline-text::before {
+    transform: scaleX(1);
+}
+
+.adminUpdate-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     padding:1rem;
+    width: 15rem;
+    text-align: center;
+    background-color: rgb(225, 77, 77);
+    margin: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+.adminUpdate-btn {
+    letter-spacing: 1px; 
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.adminUpdate-btn:hover {
+    background-color: rgb(246, 105, 105);
+}
+
+@media(max-width:880px){
+    .adminUpdate-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         padding:0.5rem;
+        width: 7rem;
+        text-align: center;
+        background-color: rgb(225, 77, 77);
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-size: 15px;
+        border-radius: 4px;
+        color: white;
+    }
+}

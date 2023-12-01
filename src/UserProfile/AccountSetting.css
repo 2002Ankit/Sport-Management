@@ -1,0 +1,135 @@
+/* .contact {
+    background-image: url(../assets/bgstd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 400px;
+} */
+
+.account-container {
+    width: 100%;
+    padding: 1.875rem;
+    display: flex;
+    gap: 2.125rem;
+    /* position: relative; */
+}
+
+.account-wrapper {
+    height: 2.5rem;
+    width: 100%;
+    position: relative;
+    /* color: black; */
+
+}
+
+.account-wrapper input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgb(192, 192, 192);
+    outline-style: none;
+    color: black;
+    background: none; 
+
+
+}
+
+
+
+.account-wrapper input:focus~label,
+.account-wrapper input:valid~label {
+    transform: translateY(-20px);
+    font-size: 17px;
+    color: rgb(225, 77, 77);
+    font-weight: 600;
+}
+
+.account-wrapper label {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: gray;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 14;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.underline-text{
+    position: absolute;
+    height: 2px;
+    /* width: 100%; */
+    bottom: 0;
+}
+
+.underline-text::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgb(225, 77, 77);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.account-wrapper input:focus~.underline-text::before,
+.account-wrapper input:valid~.underline-text::before {
+    transform: scaleX(1);
+}
+
+.btn-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    padding:1rem;
+    width: 11.875rem;
+    text-align: center;
+    background-color: rgb(225, 77, 77);
+    margin: auto;
+    margin-top: 0.625rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+
+
+.btn-account:hover {
+    background-color: rgb(246, 105, 105);
+}
+
+@media(max-width:880px){   
+
+    .account-container{
+        display: flex;
+        flex-direction: column;        
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .btn-account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.15rem;
+        padding: 0.5rem;
+        width: 7rem;
+        text-align: center;
+        background-color: rgb(225, 77, 77);
+        
+        margin-top: 0.625rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+    }
+    
+   
+}

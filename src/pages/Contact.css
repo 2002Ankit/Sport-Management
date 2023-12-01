@@ -1,0 +1,158 @@
+.contact {
+    background-image: url(../assets/bgstd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 25rem;
+}
+
+.input-container {
+   
+    width: 100%;
+    padding: 1.875rem;
+    display: flex;
+    gap: 2.125rem;
+}
+
+.input-wrapper {
+    height: 2.5rem;
+    width: 100%;
+    position: relative;
+
+}
+
+.input-wrapper input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgb(192, 192, 192);
+    outline-style: none;
+    color: white;
+    background: transparent;
+
+
+}
+
+
+
+.input-wrapper input:focus~label,
+.input-wrapper input:valid~label {
+    transform: translateY(-20px);
+    font-size: 17px;
+    color: rgb(225, 77, 77);
+    font-weight: 600;
+}
+
+.input-wrapper label {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: gray;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    /* font-size: 14px; */
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.underline-text{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+}
+
+.underline-text::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgb(225, 77, 77);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-wrapper input:focus~.underline-text::before,
+.input-wrapper input:valid~.underline-text::before {
+    transform: scaleX(1);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.9375rem;
+    width: 8.75rem;
+    text-align: center;
+    background-color: rgb(225, 77, 77);
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.btn button {
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.btn:hover {
+    background-color: rgb(225, 77, 77);
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-text{
+    margin-top: 3rem;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+    
+}
+
+.gmail-logo{
+   margin-left: 4rem;
+   height: 2.8125rem;
+   width: 2.8125rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;   
+   background-color: rgb(197, 195, 195);
+   border-radius: 4px;
+}
+
+.gmail{
+    font-weight: 400;
+}
+
+
+@media(max-width:880px){
+    .contact-responsive{
+        display: flex;        
+        /* flex-wrap: wrap; */
+    }
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+
+    .input-wrapper {
+        height: 2.5rem;
+        width: 100%;
+        position: relative;
+    
+    }
+}

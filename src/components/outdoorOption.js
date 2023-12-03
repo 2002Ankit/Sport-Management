@@ -17,7 +17,7 @@ const OutdoorOption = ({registrationData , setRegistrationData}) => {
             value={registrationData.outdoorOption}
             onChange={changeHandler}
             placeholder="please select"
-            className="bg-white rounded-[0.5rem] w-[300px] p-[8px]">
+            className="bg-white rounded-[0.5rem] w-full relative p-[8px]">
             <option value="cricket">Cricket</option>
             <option value="soccer">Soccer</option>
             <option value="volleyball">Volley ball</option>

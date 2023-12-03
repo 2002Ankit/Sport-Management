@@ -4,14 +4,13 @@
     width: 100vw;
     height: 100vh;
 }
-
 .SidebarAndContent{
     display: flex;
     flex: 1;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.05) ;
-    
+    background-color: rgba(0, 0, 0, 0.05);
+
 }
 .sideMenu{
     height: 100%;
@@ -19,45 +18,33 @@
 .sideMenuVertical{
     height: 100%;
 }
-
 .Footer{
     height: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: #D3D3D3;
-   
-    
-    }
+}
+.Content{
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgb(219, 222, 219);
+    height: 100%;
+    width: 100vw;
+    color: aliceblue;
+}
+.card{
+    gap: 2rem;
+}
+.dashboard-card{
+    display: flex;
+    gap: 2rem;
 
-    .Content{
-        padding-left: 12px;
-        padding-right: 12px;
-        
-        background-color: rgb(219, 222, 219);
-       
-        width: 100vw;
-       color: aliceblue;
-       
-    }
-
-    .card{
-        gap: 2rem;
-    }
-    .dashboard-card{
-        display: flex;
-        gap: 2rem;
-        
-    }
-
-    .recent-applicant{
-        font-size: 18px;
-        font-weight: 600;
-        
-       
-        
-    }
-    
+}
+.recent-applicant{
+    font-size: 18px;
+    font-weight: 600;
+}
 .applicant-chart{
     display: flex;
     gap: 2rem;
@@ -75,13 +62,11 @@
     .dashboard-card{
         display: flex;
         flex-direction: column;
-       justify-content: flex-start;
-       align-items: flex-start;
-       
+        justify-content: flex-start;
+        align-items: flex-start;
         gap: 2rem;
     }
-
-    .applicant-chart{
+    .applicant-chart {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -89,22 +74,17 @@
         align-items: flex-start;
         gap: 2rem;
     }
-
     .admindashboard-table{
         overflow-x: scroll;
         position: relative;
-        
     }
-
     .chart-card{
         overflow-x: scroll;
         position: relative;
     }
-
     .dash-notify{
         display: flex;
-        gap: 2rem;        
+        gap: 2rem;
         justify-content: start;
     }
 }
-    

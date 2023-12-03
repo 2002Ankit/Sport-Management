@@ -30,24 +30,28 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
     const [showNavItems, setShowNavItems] = useState(false);
     const navRef = useRef();
 
-    useEffect(()=>{
-        let handler = (e)=>{
-            if(!navRef.current.contains(e.target)){
+    useEffect(() => {
+        let handler = (e) => {
+            if (!navRef.current.contains(e.target)) {
                 setShowNavItems(false);
             }
             console.log(e.target);
             console.log(navRef);
         };
-        document.addEventListener("mousedown",handler);
+        document.addEventListener("mousedown", handler);
 
-        return()=>{
-            document.removeEventListener("mousedown",handler);
+        return () => {
+            document.removeEventListener("mousedown", handler);
         }
     });
 
     const getLoginDetail = localStorage.getItem("user_login");
     // console.log(getLoginDetail);
-    const detailObject = JSON.parse(getLoginDetail);   
+    const detailObject = JSON.parse(getLoginDetail);
+
+    const getAdminDetail = localStorage.getItem("admin_login");
+    // console.log(getLoginDetail);
+    const adminDetail = JSON.parse(getAdminDetail);
 
     return (
         <div className="navbar flex justify-evenly items-center w-screen  py-6  h-[80px] bg-green-700 mx-auto" ref={navRef}>
@@ -88,10 +92,10 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
                         }}
                     >
                         <a onClick={(e) => e.preventDefault()}>
-                            <Space style={{color:"white",cursor:"pointer", font:"medium" }} >
+                            <Space style={{ color: "white", cursor: "pointer", font: "medium" }} >
                                 Registration
-                                <DownOutlined className=" text-[15px]" />                                
-                            </Space>                            
+                                <DownOutlined className=" text-[15px]" />
+                            </Space>
                         </a>
                     </Dropdown>
 
@@ -126,7 +130,7 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
 
                     {!isloggedIn && isadminloggedIn &&
                         <Link to="/"><button className=" text-white border border-richblack-700 rounded-[8px] py-1 px-3  hover:bg-richblack-800  cursor-pointer transition-all duration-200  " onClick={() => {
-                            setisadminloggedIn(false);                            
+                            setisadminloggedIn(false);
                             toast.success("Logged Out")
                         }}>log out</button></Link>
                     }
@@ -134,11 +138,17 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
                     {!isloggedIn && isadminloggedIn &&
                         <Link to="/adminDash"><button className=" text-white border border-richblack-700 rounded-[8px] py-1 px-3   hover:bg-richblack-800  cursor-pointer transition-all duration-200 ">Dashboard</button></Link>
                     }
-                    
-                    { isloggedIn &&
-                           <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile/></span>{detailObject[0].map((detail)=>{
-                              return detail.firstName;
-                           })}</p>                        
+
+                    {isloggedIn &&
+                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{detailObject[0].map((detail) => {
+                            return detail.firstName;
+                        })}</p>
+                    }
+
+                    {isadminloggedIn &&
+                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{adminDetail[0].map((detail) => {
+                            return detail.firstName;
+                        })}</p>
                     }
 
                 </div >

@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc"
 import { Link } from "react-router-dom"
 import "./template.css"
 
-const Template = ({ title, desc1, desc2, image, formType, setisloggedIn , setUserInfo ,isloggedIn}) => {
+const Template = ({ title, desc1, desc2, image, formType, setisloggedIn , setUserInfo ,isloggedIn,regcategory}) => {
 
     return (
 
@@ -27,7 +27,7 @@ const Template = ({ title, desc1, desc2, image, formType, setisloggedIn , setUse
 
                 {/* Displaying login or signup form conditionally */}
 
-                {formType === "Signup" ? (<SignupForm setisloggedIn={setisloggedIn} />) : (<LoginForm setisloggedIn={setisloggedIn}  isloggedIn={isloggedIn} />)}
+                {formType === "Signup" ? (<SignupForm setisloggedIn={setisloggedIn} />) : (<LoginForm setisloggedIn={setisloggedIn}  isloggedIn={isloggedIn} regcategory={regcategory}/>)}
 
                 {/*now, displaying login or signup btn  */}
                 <div className="flex flex-row items-center w-full  gap-3 mt-3 ">

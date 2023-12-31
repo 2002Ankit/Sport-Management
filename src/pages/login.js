@@ -2,7 +2,7 @@ import React from "react"
 import Template from "../components/template"
 import loginImg from "../assets/login.png"
 
-const Login = ({ setisloggedIn , isloggedIn }) => {
+const Login = ({ setisloggedIn , isloggedIn ,regcategory}) => {
 
     return (
         <Template
@@ -12,7 +12,9 @@ const Login = ({ setisloggedIn , isloggedIn }) => {
             image={loginImg}
             formType="login"
             setisloggedIn={setisloggedIn} 
-            isloggedIn={isloggedIn}           
+            isloggedIn={isloggedIn} 
+           
+            regcategory={regcategory}          
 
         />
     )

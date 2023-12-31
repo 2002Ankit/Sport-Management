@@ -35,8 +35,8 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
             if (!navRef.current.contains(e.target)) {
                 setShowNavItems(false);
             }
-            console.log(e.target);
-            console.log(navRef);
+            // console.log(e.target);
+            // console.log(navRef);
         };
         document.addEventListener("mousedown", handler);
 
@@ -45,11 +45,12 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
         }
     });
 
-    const getLoginDetail = localStorage.getItem("user_login");
+    const getLoginDetail = localStorage.getItem("usersport");
     // console.log(getLoginDetail);
     const detailObject = JSON.parse(getLoginDetail);
+    console.log(detailObject)
 
-    const getAdminDetail = localStorage.getItem("admin_login");
+    const getAdminDetail = localStorage.getItem("adminsport");
     // console.log(getLoginDetail);
     const adminDetail = JSON.parse(getAdminDetail);
 
@@ -140,13 +141,13 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
                     }
 
                     {isloggedIn &&
-                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{detailObject[0].map((detail) => {
+                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{detailObject.map((detail) => {
                             return detail.firstName;
                         })}</p>
                     }
 
                     {isadminloggedIn &&
-                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{adminDetail[0].map((detail) => {
+                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{adminDetail.map((detail) => {
                             return detail.firstName;
                         })}</p>
                     }

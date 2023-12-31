@@ -1,17 +1,19 @@
 import React, { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { Link } from "react-router-dom"
+import { Link, redirect } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast"
 
 import "./loginForm.css";
 
 
-const LoginForm = ({ setisloggedIn }) => {
+const LoginForm = ({ setisloggedIn,  regcategory, isloggedIn }) => {
+
+console.log(regcategory);
 
     const [formData, setformData] = useState({ email: "", password: "" });
-    
-    const [data, setData] = useState([]);    
+
+    const [data, setData] = useState([]);
 
 
     const navigate = useNavigate();
@@ -70,13 +72,17 @@ const LoginForm = ({ setisloggedIn }) => {
                 if (userlogin.length === 0) {
                     alert("invalid details")
                 } else {
+
                     toast.success("User login succesfully");
-                    localStorage.setItem("user_login", JSON.stringify([...data, userlogin]))                   
+                    localStorage.setItem("user_login", JSON.stringify([...data, userlogin]))
+
+                    setisloggedIn(true);                  
                     
-                    setisloggedIn(true);
-                    navigate("/");                    
-                   
-                    // console.log(userdetail);
+                        { regcategory === 'indoor'? 
+                        navigate("/indoor"):navigate("/outdoor")}
+
+                        navigate("/");
+                      
                 }
             }
         }

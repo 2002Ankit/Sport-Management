@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import "./signupForm.css";
 
 
-const AdminSignupform = ({ setisloggedIn }) => {
+const AdminSignupform = () => {
 
-    const [formData, setformData] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "",birthDate:"" })
+    const [formData, setformData] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: ""})
     const[data , setData] = useState([]);
 
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ const AdminSignupform = ({ setisloggedIn }) => {
             return;
         }        
 
-        const { firstName, lastName, email, password, confirmPassword , birthDate } = formData;
+        const { firstName, lastName, email, password, confirmPassword } = formData;
 
         if (firstName === "") {
             toast.error('name field is requred!'); 
@@ -51,10 +51,8 @@ const AdminSignupform = ({ setisloggedIn }) => {
         } else if (password.length < 5) {
             toast.error('password length should be greater than five!'); 
             return; 
-        }  else if (birthDate === "") {
-            toast.error('birth date required!'); 
-            return; 
-        } else {
+        }  
+        else {
             toast.success("account created succesfully");
             
             // setisloggedIn(true);
@@ -146,16 +144,7 @@ const AdminSignupform = ({ setisloggedIn }) => {
                     </span>
                 </label>
             </div>
-
-            <label>
-                <p className="text-[0.875rem] text-richblack-5 mb-1 mt-1 leading-[1.375rem]">Date of birth<sup className="text-pink-200">*</sup></p>
-                <input required type="date"
-                    placeholder="enter your birth date"
-                    onChange={changeHandler}
-                    name="birthDate"
-                    value={formData.birthDate}
-                    className="bg-richblack-800 input-bg rounded-[0.5rem] text-richblack-5 w-full p-[7px] outline-none" />
-            </label>
+           
 
             <button className=" signup-btn w-full bg-yellow-50 border rounded-[6px] mt-6  text-richblack-800 py-[10px] leading-4 text-[18px] font-semibold">Create Account</button>
         </form>

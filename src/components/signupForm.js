@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"; import toast from "react-hot-toast";
 import UserSignupform from "./UserSignupform";
 import AdminSignupform from "./AdminSignupform";
 import "./signupForm.css";

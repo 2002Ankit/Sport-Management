@@ -57,17 +57,17 @@ const Users = () => {
     };
 
     const onAddUser = () => {
-        
-        const newUser = {                   
-          firstName: " " ,
-          lasttName: " " ,
-          email: "",
-          phone:  "",
+
+        const newUser = {
+            firstName: " ",
+            lasttName: " ",
+            email: "",
+            phone: "",
         };
         setUserdata((pre) => {
-          return [...pre, newUser];
+            return [...pre, newUser];
         });
-      };
+    };
 
     return (
 
@@ -75,7 +75,7 @@ const Users = () => {
             <Typography.Title level={4} className=" mt-2">
                 Users
             </Typography.Title>
-            
+
             <Table
                 columns={[
                     {
@@ -126,7 +126,7 @@ const Users = () => {
                 }}
             ></Table>
 
-<Button onClick={onAddUser} style={{ marginLeft:"30rem", marginBottom:"2rem", background:"#90EE90"}}>Add New User</Button>
+            <Button onClick={onAddUser} style={{ marginLeft: "30rem", marginBottom: "2rem", background: "#90EE90" }}>Add New User</Button>
 
             <Modal
                 title="Edit User"

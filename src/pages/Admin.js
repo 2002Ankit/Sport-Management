@@ -8,7 +8,7 @@ import "./Admin.css"
 import HomeFooter from "../components/HomeFooter";
 
 const Admin = ({ setisloggedIn, setisadminloggedIn }) => {
-    const [formData, setformData] = useState({ userName: "", password: "", birthDate: "" })
+    const [formData, setformData] = useState({ userName: "", password: ""})
 
     const [showPassword, setshowPassword] = useState(false);
     const [data, setData] = useState([]);
@@ -48,10 +48,8 @@ const Admin = ({ setisloggedIn, setisadminloggedIn }) => {
         } else if (password.length < 5) {
             toast.error("password field greater than five!");
             return;
-        } else if (birthDate === "") {
-            toast.error("birthdate required!");
-            return;
-        }
+        } 
+        
         else {
 
             if (getadminArr && getadminArr.length) {
@@ -123,15 +121,7 @@ const Admin = ({ setisloggedIn, setisadminloggedIn }) => {
                             {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
                         </span>
                     </label>
-                    <label>
-                        <p className="text-white text-[17px] mt-4">Date of birth<span className=" text-pink-600">*</span></p>
-                        <input type="date"
-                            placeholder="Enter your birthDate "
-                            name="birthDate"
-                            onChange={changeHandler}
-                            value={formData.birthDate}
-                            className=" date-input p-2 mt-1 rounded-md w-full text-white bg-transparent border border-richblack-100 outline-none " />
-                    </label>
+                   
                 </div>
                 <div className="flex flex-row gap-[90px] mt-4 relative  justify-center items-center ">
                     <button className="text-white bg-red-700 border p-2 px-5 mt-4 text-[17px] rounded-md hover:bg-red-500" >Login</button>

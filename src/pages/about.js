@@ -18,7 +18,7 @@ const About = () => {
     return (
         <div className=" w-[100vw]">
            
-            <Carousel autoplay>
+            <Carousel autoplay className="about-carousel">
                 <div className="about-background1">
                     <h3 className="about-heading" >A Platform for the next <br></br><span className=" text-[#FF671F]">generation <span className=" text-[#FFFFFF]">of</span> <span className=" text-[#349e6b]">players!</span></span></h3>
                 </div>

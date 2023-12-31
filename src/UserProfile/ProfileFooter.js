@@ -10,8 +10,8 @@ export const ProfileFooter = () => {
       <div><a href='https://www.google.com/' target={"_blank"}>Terms of Use</a></div>
       <div className=' flex justify-center items-center gap-[2rem] '>
         <div><a href="https://en.wikipedia.org/wiki/Twitter" target={"_blank"}><AiFillTwitterCircle className=' w-[25px] h-[25px]' /></a></div>
-        <div><a href='https://www.instagram.com/' target={"_blank"}><AiFillLinkedin className=' w-[25px] h-[25px] rounded' /></a></div>
-        <div><a href='https://www.facebook.com/' target={"_blank"}><AiFillFacebook className=' w-[25px] h-[25px] rounded' /></a></div>
+        <div><AiFillLinkedin className=' w-[25px] h-[25px] rounded' /></div>
+        <div><AiFillFacebook className=' w-[25px] h-[25px] rounded' /></div>
       </div>
     </div>
   )

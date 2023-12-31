@@ -2,13 +2,19 @@
     background: url("../assets/aboutimg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
+    background-position: top;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
+    
     position:relative ;
     
     
     
+}
+.about-carousel{
+    width: 100vw;
+    height: 50vh;
 }
 .about-background2{
     background: url("../assets/aboutCricketImg.jpg");
@@ -16,7 +22,7 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     position:relative ;
     
     
@@ -25,8 +31,9 @@
     background: url("../assets/aboutChessImg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+   background-position:calc(100%);
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     position:relative ;
     
     
@@ -35,8 +42,9 @@
     background: url("../assets/aboutStadImg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:calc(100% );
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     position:relative ;
     
     

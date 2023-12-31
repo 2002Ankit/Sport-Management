@@ -4,12 +4,13 @@ import { Link, redirect } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast"
 
+
 import "./loginForm.css";
 
 
-const LoginForm = ({ setisloggedIn,  regcategory, isloggedIn }) => {
+const LoginForm = ({ setisloggedIn, regcategory, isloggedIn }) => {
 
-console.log(regcategory);
+    console.log(regcategory);
 
     const [formData, setformData] = useState({ email: "", password: "" });
 
@@ -76,13 +77,15 @@ console.log(regcategory);
                     toast.success("User login succesfully");
                     localStorage.setItem("user_login", JSON.stringify([...data, userlogin]))
 
-                    setisloggedIn(true);                  
-                    
-                        { regcategory === 'indoor'? 
-                        navigate("/indoor"):navigate("/outdoor")}
+                    setisloggedIn(true);
 
-                        navigate("/");
-                      
+                    {
+                        regcategory === 'indoor' ?
+                        navigate("/indoor") : navigate("/outdoor")
+                    }
+
+                    navigate("/");
+
                 }
             }
         }
@@ -90,44 +93,45 @@ console.log(regcategory);
     }
 
     return (
+        
+            <form onSubmit={submitHandler} className="flex flex-col flex-wrap w-full gap-y-4 mt-6">
+                <label className="w-full">
+                    <p className="text-[0.875rem text-richblack-5 mb-1 leading-[1.375rem]">Email Address<sup className="text-pink-200">*</sup></p>
+                    <input required type="email" placeholder="enter your email id"
+                        onChange={changeHandler}
+                        name="email"
+                        value={formData.email}
+                        autoComplete="off"
+                        className="bg-richblack-800 login-input rounded-[0.5rem] text-richblack-5 w-full p-[12px] outline-none" />
+                </label>
 
-        <form onSubmit={submitHandler} className="flex flex-col flex-wrap w-full gap-y-4 mt-6">
-            <label className="w-full">
-                <p className="text-[0.875rem text-richblack-5 mb-1 leading-[1.375rem]">Email Address<sup className="text-pink-200">*</sup></p>
-                <input required type="email" placeholder="enter your email id"
-                    onChange={changeHandler}
-                    name="email"
-                    value={formData.email}
-                    autoComplete="off"
-                    className="bg-richblack-800 login-input rounded-[0.5rem] text-richblack-5 w-full p-[12px] outline-none" />
-            </label>
-
-            <label className="w-full relative ">
-                <p className="text-[0.875rem text-richblack-5 mb-1 leading-[1.375rem]">Password<sup className="text-pink-200">*</sup></p>
-                <input required type={showPassword ? ("text") : ("password")} placeholder="enter your password"
-                    onChange={changeHandler}
-                    name="password"
-                    value={formData.password}
-                    autoComplete="off"
-                    className=" bg-richblack-800 login-input rounded-[0.5rem] text-richblack-5 w-full p-[12px] outline-none" /><br />
-
-
-                <span onClick={() => setshowPassword((prev) => !prev)} className="absolute text-richblack-5 top-9 right-5 text-2xl ">
-                    {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
-                </span>
-
-                <Link to="#">
-                    <p className="forget-text text-blue-300 relative text-right">Forget password</p>
-                </Link>
-
-            </label>
-
-            <button className=" login-btn w-full bg-yellow-50 border rounded-[6px] text-richblack-800 py-[10px] leading-4 text-[18px] font-semibold">Sign in</button>
+                <label className="w-full relative ">
+                    <p className="text-[0.875rem text-richblack-5 mb-1 leading-[1.375rem]">Password<sup className="text-pink-200">*</sup></p>
+                    <input required type={showPassword ? ("text") : ("password")} placeholder="enter your password"
+                        onChange={changeHandler}
+                        name="password"
+                        value={formData.password}
+                        autoComplete="off"
+                        className=" bg-richblack-800 login-input rounded-[0.5rem] text-richblack-5 w-full p-[12px] outline-none" /><br />
 
 
+                    <span onClick={() => setshowPassword((prev) => !prev)} className="absolute text-richblack-5 top-9 right-5 text-2xl ">
+                        {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                    </span>
 
-        </form>
+                    <Link to="#">
+                        <p className="forget-text text-blue-300 relative text-right">Forget password</p>
+                    </Link>
 
+                </label>
+
+                <button className=" login-btn w-full bg-yellow-50 border rounded-[6px] text-richblack-800 py-[10px] leading-4 text-[18px] font-semibold">Sign in</button>
+
+
+
+            </form>
+           
+        
     )
 }
 export default LoginForm;

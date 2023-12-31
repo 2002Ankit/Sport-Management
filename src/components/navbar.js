@@ -147,7 +147,7 @@ const Navbar = ({ isloggedIn, setisloggedIn, isadminloggedIn, setisadminloggedIn
                     }
 
                     {isadminloggedIn &&
-                        <p className="  text-[17px] text-richblack-800 font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{adminDetail.map((detail) => {
+                        <p className="  text-[17px] text-white font-sans font-medium"><span className=" flex justify-center text-[20px] text-richblack-700"><CgProfile /></span>{adminDetail.map((detail) => {
                             return detail.firstName;
                         })}</p>
                     }
